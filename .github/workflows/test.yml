@@ -1,0 +1,13 @@
+name: 🎄 Run tests
+on: [push]
+jobs:
+  run-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🏗 Checkout repo 
+        uses: actions/checkout@v2
+      - name: 🤖 Install deps
+        run: yarn
+      - name: 🍎 Test
+        run: yarn test
+
